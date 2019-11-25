@@ -1,0 +1,34 @@
+public class laskin{
+
+		//kaikki java-ohjelmat alkavat main-metodista
+		public static void main(String[] args){
+			if(args.length !=3){
+				System.out.println("Anna parametriksi kaksi kokonaislukua ja niiden väliin laskumerkki");
+				System.exit(0); //lopettaa ohjelman tähän
+			}
+
+			//muutetaan parametrinä saadut merkkijonot luvuiksi
+			//HUOM! ohjelma kaatuu jos parametrit eivät ole kokonaislukuja!
+			int luku1 = Integer.parseInt(args[0]);
+			int luku2 = Integer.parseInt(args[2]);
+      if (args[1].equals("+")){
+  			int summa = luku1+luku2;
+  			//tulostetaan summa
+  			System.out.println("Lukujen "+ luku1 + " ja " + luku2+" summa on: " +summa);
+      }
+      if (args[1].equals("-")){
+        int summa = luku1-luku2;
+        System.out.println("Lukujen " + luku1 + " ja " + luku2 + " miinuslasku on: " +summa);
+      }
+      if (args[1].equals("x")){
+        int summa = luku1*luku2;
+        System.out.println("Lukujen " + luku1 + " ja " + luku2 + " tulo on: " +summa);
+      }
+      if (args[1].equals("/")){
+        double summa = 1.0*luku1/luku2;
+        System.out.println("Lukujen " + luku1 + " ja " + luku2 + " jakolasku on: " +summa);
+      }
+			//ohjelma päättyy
+		}
+
+}
